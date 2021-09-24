@@ -1,0 +1,41 @@
+<?xml version="1.0" ?>
+<launch>
+
+<rosparam file="$(find q_dot_02_description)/launch/controller.yaml" command="load"/>
+<node args="joint_state_controller
+  
+  rf_hip_joint_position_controller
+  lf_hip_joint_position_controller
+  lh_hip_joint_position_controller 
+  rh_hip_joint_position_controller  
+  rf_lower_joint_position_controller 
+  rf_upper_joint_position_controller 
+  lf_upper_joint_position_controller 
+  lf_lower_joint_position_controller 
+  lh_upper_joint_position_controller 
+  lh_lower_joint_position_controller 
+  rh_upper_joint_position_controller 
+  rh_lower_joint_position_controller
+
+  
+  " name="controller_spawner" ns="q_dot_02" output="screen" pkg="controller_manager" respawn="false" type="spawner"/>
+<node name="robot_state_publisher" output="screen" pkg="robot_state_publisher" respawn="false" type="robot_state_publisher">
+  <remap from="/joint_states" to="/q_dot_02/joint_states"/>
+</node>
+
+<!-- <node args="joint_state_controller
+  rf_hip_joint_position_controller 
+  lf_hip_joint_position_controller 
+  lh_hip_joint_position_controller 
+  rh_hip_joint_position_controller 
+  rf_upper_joint_position_controller 
+  rf_lower_joint_position_controller 
+  lf_upper_joint_position_controller 
+  lf_lower_joint_position_controller 
+  lh_upper_joint_position_controller 
+  lh_lower_joint_position_controller 
+  rh_upper_joint_position_controller 
+  rh_lower_joint_position_controller 
+  " name="controller_spawner" ns="q_dot_02" output="screen" pkg="controller_manager" respawn="false" type="spawner"/> -->
+
+</launch>

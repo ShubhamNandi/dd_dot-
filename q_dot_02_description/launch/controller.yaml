@@ -1,0 +1,55 @@
+q_dot_02:
+  # Publish all joint states -----------------------------------
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50
+
+  # Position Controllers --------------------------------------
+  rf_hip_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: rf_hip_joint
+    pid: {p: 60.0, i: 0.0, d: 55.0}
+  lf_hip_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: lf_hip_joint
+    pid: {p: 60.0, i: 0.0, d: 55.0}
+  lh_hip_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: lh_hip_joint
+    pid: {p: 60.0, i: 0.0, d: 55.0}
+  rh_hip_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: rh_hip_joint
+    pid: {p: 60.0, i: 0.0, d: 55.0}
+  rf_upper_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: rf_upper_joint
+    pid: {p: 60.0, i: 0.0, d: 55.0}
+  rf_lower_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: rf_lower_joint
+    pid: {p: 60.0, i: 0.0, d: 55.0}
+  lf_upper_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: lf_upper_joint
+    pid: {p: 60.0, i: 0.0, d: 55.0}
+  lf_lower_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: lf_lower_joint
+    pid: {p: 60.0, i: 0.0, d: 55.0}
+  lh_upper_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: lh_upper_joint
+    pid: {p: 60.0, i: 0.0, d: 55.0}
+  lh_lower_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: lh_lower_joint
+    pid: {p: 60.0, i: 0.0, d: 55.0}
+  rh_upper_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: rh_upper_joint
+    pid: {p: 60.0, i: 0.0, d: 55.0}
+  rh_lower_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: rh_lower_joint
+    pid: {p: 60.0, i: 0.0, d: 55.0}
